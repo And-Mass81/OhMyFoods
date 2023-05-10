@@ -385,22 +385,23 @@ footer ul li {
 }
 /*------------------- Menus Styles ----------------------*/
 .headerMenu {
-  background-color: aqua;
   display: flex;
   align-items: center;
 }
 .headerMenu img {
   margin-right: auto;
+  margin-left: -40px;
 }
 .headerMenu a {
   margin-right: auto;
 }
 
 .MenuImage {
-  width: 100%;
-  height: 275px;
+  max-width: 1440px;
+  height: 290px;
   background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-size: cover;
+  margin: 0 auto;
 }
 
 .menuMain {
@@ -410,10 +411,8 @@ footer ul li {
   border-top-left-radius: 40px;
   position: relative;
   bottom: 50px;
-  margin-bottom: -50px;
-}
-.menuMain button {
-  margin: 0 auto;
+  max-width: 1055px;
+  margin: 0 auto -50px auto;
 }
 
 .tiTleMenu {
@@ -425,10 +424,12 @@ footer ul li {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 28px;
+  margin: 30px 0 20px 0;
 }
 
-.menuDescrip {
-  margin-bottom: 80px;
+.repas {
+  max-width: 634px;
+  margin: 0 auto;
 }
 
 .titleMinRepas {
@@ -444,49 +445,73 @@ hr {
   margin-right: 100%;
 }
 
-.insideMenu {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-  background-color: #fff;
+/*------------------- Menu check ----------------------*/
+.menuLine {
+  height: 70px;
   width: 100%;
-  height: 69px;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  padding-left: 5px;
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 2px 4px 15px #dedede;
+  transition: 300ms ease-in-out;
 }
-.insideMenu P {
+
+.menuText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  padding: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menuText p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-weight: 300;
   font-size: 15.04px;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
-.titleRepas {
-  width: 100%;
-  text-overflow: ellipsis;
+.menuText h3 {
   overflow: hidden;
-  font-weight: 500;
-  font-size: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.iconCheck {
-  width: 59px;
-  height: 71px;
+.menuPrice {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #99E2D0;
-  position: absolute;
-  bottom: 0px;
-  right: 20px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  align-items: flex-end;
+  height: 90%;
+  margin-bottom: 20px;
 }
-.iconCheck .fa-circle-check {
-  color: #fff;
+
+.menuIcon {
+  height: 100%;
+  background-color: #99e2d0;
+  width: 4em;
+  margin-right: -4em;
+  margin-left: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.8s;
+}
+
+.fa-circle-check {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.menuLine:hover .menuIcon {
+  margin-right: 0em;
 }
 
 /*------------------- animations ----------------------*/

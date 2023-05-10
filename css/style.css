@@ -532,7 +532,7 @@ hr {
   border-color: white transparent white transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
-  margin-bottom: 400px;
+  margin-bottom: 600px;
   position: fixed;
 }
 @keyframes spin {
@@ -543,7 +543,7 @@ hr {
 
 @keyframes load {
   0% {
-    opacity: 80%;
+    opacity: 98%;
   }
   95% {
     opacity: 0;

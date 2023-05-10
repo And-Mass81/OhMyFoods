@@ -82,7 +82,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
@@ -121,6 +120,11 @@ header img {
   padding: 15px;
 }
 
+.fa-arrow-left {
+  color: #353535;
+  margin-left: 23px;
+}
+
 .banner {
   width: 100%;
   display: flex;
@@ -128,6 +132,7 @@ header img {
   padding: 20px;
   gap: 10px;
   background-color: #EAEAEA;
+  box-shadow: inset 0px 11px 11px -8px rgba(0, 0, 0, 0.25);
 }
 .banner p {
   font-weight: 500;
@@ -159,6 +164,16 @@ button {
 }
 button:hover {
   filter: contrast(100%) brightness(110%) drop-shadow(2px 2px 8px rgb(224, 224, 224));
+}
+
+.buttonWrap {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.buttonWrap button {
+  width: 186px;
+  height: 50px;
 }
 
 /* fonctionnement*/
@@ -257,9 +272,9 @@ button:hover {
   height: 75px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
-.textCard h3 {
+.textCard .titreCardPetit {
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 .textCard p {
   font-weight: 300;
@@ -318,6 +333,9 @@ footer ul li {
   .mainTitle {
     max-width: 1440px;
     margin: 0 auto;
+  }
+  .banner {
+    box-shadow: none;
   }
   .fonctionnement {
     max-width: 1440px;
@@ -381,6 +399,9 @@ footer ul li {
   }
   footer img {
     margin-top: 8px;
+  }
+  .spinner {
+    margin-top: 1000px;
   }
 }
 /*------------------- Menus Styles ----------------------*/
@@ -516,20 +537,23 @@ hr {
 
 /*------------------- animations ----------------------*/
 .menuOne {
-  animation: menu-load 400ms ease-in 100ms;
+  animation: menu-load 600ms ease-in 100ms;
+  margin-bottom: 52px;
 }
 
 .menuTwo {
-  animation: menu-load 500ms ease-in 150ms;
+  animation: menu-load 900ms ease-in 100ms;
+  margin-bottom: 52px;
 }
 
 .menuThree {
-  animation: menu-load 600ms ease-in 200ms;
+  animation: menu-load 1200ms ease-in 100ms;
+  margin-bottom: 40px;
 }
 
 @keyframes menu-load {
   0% {
-    transform: translateY(-30%);
+    transform: translateY(-40%);
     opacity: 0;
   }
   100% {
@@ -557,7 +581,7 @@ hr {
   border-color: white transparent white transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
-  margin-bottom: 400px;
+  margin-bottom: 1750px;
   position: fixed;
 }
 @keyframes spin {

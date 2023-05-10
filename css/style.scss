@@ -82,7 +82,6 @@ video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 	box-sizing: border-box;
@@ -128,6 +127,11 @@ header {
 	}
 }
 
+.fa-arrow-left{
+	color:#353535;
+	margin-left: 23px;
+}
+
 .banner {
 	width: 100%;
 	display: flex;
@@ -135,7 +139,7 @@ header {
 	padding: 20px;
 	gap: 10px;
 	background-color: $back-darkGrey;
-	
+	box-shadow: inset 0px 11px 11px -8px rgba(0,0,0,0.25);
 
 	p {
 		font-weight: 500;
@@ -174,6 +178,15 @@ button {
 	}
 }
 
+.buttonWrap{
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.buttonWrap button{
+	width: 186px;
+	height: 50px;
+}
 
 
 /* fonctionnement*/
@@ -281,9 +294,9 @@ button {
 	height: 75px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
-	h3 {
+	.titreCardPetit {
 		font-weight: 700;
-		font-size: 1.125rem;
+		font-size: 18px;
 	}
 
 	p {
@@ -351,6 +364,10 @@ footer {
 	.mainTitle {
 		max-width: 1440px;
 		margin: 0 auto;
+	}
+
+	.banner{
+		box-shadow: none;
 	}
 
 	.fonctionnement {
@@ -432,170 +449,179 @@ footer {
 
 	}
 
+	.spinner{
+		margin-top: 1000px;
+	  }
+
+
 }
 
 /*------------------- Menus Styles ----------------------*/
 
 .headerMenu{
-	display: flex;	
+ display: flex;	
+ align-items: center;
+  img{
+	margin-right: auto;
+	margin-left: -40px;
+  }
+ 
+ a{
+	margin-right: auto;
+ }
+}
+
+.MenuImage{
+	max-width: 1440px;
+	height: 290px;	
+	background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+	background-size: cover;
+	margin: 0 auto;
+   }
+   
+
+.menuMain{
+	background-color: $back-grey;
+    padding: 0 13px;
+	border-top-right-radius: 40px;
+	border-top-left-radius: 40px;
+    position: relative;
+	bottom: 50px;
+    max-width: 1055px;
+	margin: 0 auto -50px auto;
+
+}
+
+
+
+.tiTleMenu{
+	display: flex;
 	align-items: center;
-	 img{
-	   margin-right: auto;
-	   margin-left: -40px;
-	 }
-	
-	a{
-	   margin-right: auto;
+	justify-content: center;
+	H1{
+		font-family: $alternative-font;
+		font-weight: 400;
+		font-size: 28px;
+		margin: 30px 0 20px 0,
 	}
-   }
-   
-   .MenuImage{
-	   max-width: 1440px;
-	   height: 290px;	
-	   background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-	   background-size: cover;
-	   margin: 0 auto;
-	  }
-	  
-   
-   .menuMain{
-	   background-color: $back-grey;
-	   padding: 0 13px;
-	   border-top-right-radius: 40px;
-	   border-top-left-radius: 40px;
-	   position: relative;
-	   bottom: 50px;
-	   max-width: 1055px;
-	   margin: 0 auto -50px auto;
-   
-   }
-   
-   
-   
-   .tiTleMenu{
-	   display: flex;
-	   align-items: center;
-	   justify-content: center;
-	   H1{
-		   font-family: $alternative-font;
-		   font-weight: 400;
-		   font-size: 28px;
-		   margin: 30px 0 20px 0,
-	   }
-	   
-   }
-   
-   .repas{
-	   max-width: 634px;
-	   margin: 0 auto;
-   }
-   
-   
-   .titleMinRepas{
-	   font-weight: 300;
-	   font-size: 16px;
-	   text-overflow: ellipsis;
-	   overflow: hidden;
-   }
-   
-   hr{
-	   border: 1px solid $main-turquoise;
-	   width: 40px;
-	   margin-right: 100%;
-   }
-   
-   
-   /*------------------- Menu check ----------------------*/
-   
-   .menuLine {
-	   height: 70px;
-	   width: 100%;
-	   display: flex;
-	   justify-content: flex-start;
-	   align-items: center;
-	   margin-top: 15px;
-	   padding-left: 5px;
-	   background-color: #ffff;
-	   border-radius: 18px;
-	   overflow: hidden;
-	   box-shadow: 2px 4px 15px #dedede;
-	   transition: 300ms ease-in-out;
-   }
-   
-   
-   .menuText{
-	   display: flex;
-	   flex-direction: column;
-	   justify-content: space-around;
-	   flex: 1;
-	   padding: 5px;
-	   white-space: nowrap;
-	   text-overflow: ellipsis;
-	   overflow: hidden;
-   
-	   p {
-		   overflow: hidden;
-		   white-space: nowrap;
-		   text-overflow: ellipsis;
-		   font-weight: 300;
-		   font-size: 15.04px;
-	   }
-   }
-   
-   .menuText h3{
-	   overflow: hidden;
-	   white-space: nowrap;
-	   text-overflow: ellipsis;
-   }
-   
-   
-   
-   .menuPrice {
-	   display: flex;
-	   align-items: flex-end;
-	   height: 90%;
-	   margin-bottom: 20px;
-   }
-   
-   .menuIcon{
-	   height: 100%;
-	   background-color: #99e2d0;
-	   width: 4em;
-	   margin-right: -4em;
-	   margin-left: 1em;
-	   display: flex;
-	   justify-content: center;
-	   align-items: center;
-	   transition-duration: 0.8s;
-   }
-   
-   .fa-circle-check{
-	   width: 20px;
-	   height: 20px;
-	   color: #ffff;
-   }
-   
-   
-   .menuLine:hover .menuIcon {
-	   margin-right: 0em;
-   } 
+    
+}
+
+.repas{
+	max-width: 634px;
+	margin: 0 auto;
+}
+
+
+.titleMinRepas{
+	font-weight: 300;
+	font-size: 16px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+hr{
+	border: 1px solid $main-turquoise;
+    width: 40px;
+	margin-right: 100%;
+}
+
+
+/*------------------- Menu check ----------------------*/
+
+.menuLine {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    padding-left: 5px;
+    background-color: #ffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 2px 4px 15px #dedede;
+    transition: 300ms ease-in-out;
+}
+
+
+.menuText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    padding: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+	p {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-weight: 300;
+		font-size: 15.04px;
+	}
+}
+
+.menuText h3{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+
+.menuPrice {
+    display: flex;
+    align-items: flex-end;
+    height: 90%;
+    margin-bottom: 20px;
+}
+
+.menuIcon{
+    height: 100%;
+    background-color: #99e2d0;
+    width: 4em;
+    margin-right: -4em;
+    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.8s;
+}
+
+.fa-circle-check{
+    width: 20px;
+    height: 20px;
+    color: #ffff;
+}
+
+
+.menuLine:hover .menuIcon {
+    margin-right: 0em;
+} 
+
 
 /*------------------- animations ----------------------*/
 
 .menuOne{
-	animation: menu-load 400ms ease-in 100ms;
+	animation: menu-load 600ms ease-in 100ms;
+	margin-bottom: 52px;
   }
 .menuTwo{
-	animation: menu-load 500ms ease-in 150ms;
+	animation: menu-load 900ms ease-in 100ms;
+	margin-bottom: 52px;
   }
 
   .menuThree{
-	animation: menu-load 600ms ease-in 200ms;
+	animation: menu-load 1200ms ease-in 100ms;
+	margin-bottom: 40px;
   }
   
   @keyframes menu-load{
 	0%{
-	 transform: translateY(-30%);
+	 transform: translateY(-40%);
 	 opacity: 0;
 	}
   
@@ -626,7 +652,7 @@ footer {
 			border-color: white transparent white transparent;
 			border-radius: 50%;
 			animation: spin 1.2s linear infinite;
-			margin-bottom: 400px;
+			margin-bottom: 1750px;
 			position: fixed;
 		  }
 
@@ -658,6 +684,7 @@ footer {
 
 			
 		}
+
 
 		 
 

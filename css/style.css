@@ -413,7 +413,7 @@ functionStepWrap {
     margin-top: 1000px;
   }
 }
-@media only screen and (min-device-width: 550px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
   .cardRestoWrap {
     display: flex;
     flex-wrap: wrap;
@@ -440,12 +440,12 @@ functionStepWrap {
     margin-top: 1000px;
   }
 }
-@media only screen and (max-device-width: 549px) {
+@media only screen and (max-width: 549px) {
   .cardResto {
     width: 100%;
   }
 }
-@media only screen and (max-device-width: 350px) {
+@media only screen and (max-width: 350px) {
   .functionStep {
     width: 280.49px;
   }

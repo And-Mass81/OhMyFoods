@@ -96,10 +96,10 @@ ul li {
 	list-style-type: none;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: #fff;
- }
+}
 
 @import "./variables.scss";
 
@@ -107,7 +107,9 @@ a{
 body {
 	font-family: $main-font;
 	position: relative;
+	
 }
+
 
 
 h1 {
@@ -127,8 +129,8 @@ header {
 	}
 }
 
-.fa-arrow-left{
-	color:#353535;
+.fa-arrow-left {
+	color: #353535;
 	margin-left: 23px;
 }
 
@@ -139,7 +141,7 @@ header {
 	padding: 20px;
 	gap: 10px;
 	background-color: $back-darkGrey;
-	box-shadow: inset 0px 11px 11px -8px rgba(0,0,0,0.25);
+	box-shadow: inset 0px 11px 11px -8px rgba(0, 0, 0, 0.25);
 
 	p {
 		font-weight: 500;
@@ -178,12 +180,12 @@ button {
 	}
 }
 
-.buttonWrap{
+.buttonWrap {
 	text-align: center;
 	padding-bottom: 40px;
 }
 
-.buttonWrap button{
+.buttonWrap button {
 	width: 186px;
 	height: 50px;
 }
@@ -229,7 +231,7 @@ button {
 		justify-content: center;
 		align-items: center;
 		border-radius: 50%;
-		left: -14px;
+		left: -4%;
 		position: absolute;
 	}
 
@@ -247,7 +249,7 @@ button {
 	h2 {
 		font-weight: 700;
 		font-size: 1.4rem;
-		margin-left: 10px;
+		margin-left: 3px;
 		margin-bottom: 20px;
 
 	}
@@ -358,15 +360,20 @@ footer {
 	margin-right: 10px;
 }
 
+functionStepWrap {
+	width: 100%;
+	display: flex;
+}
+
 @media screen and (min-width:1024px) {
 
 	header,
 	.mainTitle {
-		max-width: 1440px;
+		width: 100%;
 		margin: 0 auto;
 	}
 
-	.banner{
+	.banner {
 		box-shadow: none;
 	}
 
@@ -377,6 +384,7 @@ footer {
 		flex-wrap: wrap;
 		margin: 30px auto;
 		padding: 0;
+		background-color: #fff;
 
 		h2 {
 			max-width: 1100px;
@@ -386,14 +394,15 @@ footer {
 
 	.functionStepWrap {
 		display: flex;
-		justify-content: space-around;
-		max-width: 1100px;
-		gap: 42px;
+		max-width: 100%;
 	}
+
 
 	.functionStep {
 		width: 20.156rem;
 		position: relative;
+		margin-right: 20px;
+		margin-left: 20px;
 
 		span {
 			left: -13px;
@@ -401,14 +410,13 @@ footer {
 	}
 
 	.restaurants {
-		max-width: 1440px;
-		margin: 0 auto;
+		width: 100%;
 		padding: 0;
 
 		h2 {
 			max-width: 1100px;
 			margin: 30px auto;
-			padding-top: 30px;
+			padding: 30px 0 0 10px;
 
 		}
 	}
@@ -419,6 +427,7 @@ footer {
 		max-width: 1100px;
 		margin: 0 auto;
 		justify-content: space-between;
+		padding: 0 10px 0 10px;
 	}
 
 	.cardResto {
@@ -426,7 +435,7 @@ footer {
 	}
 
 	footer {
-		max-width: 1440px;
+		width: 100%;
 		display: flex;
 		margin: 0 auto;
 		flex-direction: row-reverse;
@@ -440,7 +449,7 @@ footer {
 			li {
 				margin-right: 10px;
 			}
-			
+
 		}
 
 		img {
@@ -449,80 +458,164 @@ footer {
 
 	}
 
-	.spinner{
+	.spinner {
 		margin-top: 1000px;
-	  }
+	}
+
+	.loading img{
+		margin-top: 1000px;
+	}
 
 
 }
+
+
+
+@media only screen and (min-device-width : 550px) and (max-device-width : 1024px) {
+
+	.cardRestoWrap {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1100px;
+		margin: 0 auto;
+		justify-content: space-between;
+		padding: 0 10px 0 10px;
+
+	}
+
+	.restaurants h2 {
+		margin-left: 6px;
+	}
+
+	.cardResto {
+		position: relative;
+		border-top-right-radius: 20px;
+		border-top-left-radius: 20px;
+		margin-bottom: 40px;
+		width: 50%;
+		padding: 20px;
+	}
+
+	.spinner {
+		margin-top: 550px;
+	}
+
+	.loading img{
+		margin-top: 1000px;
+	}
+}
+
+@media only screen and (max-device-width : 549px) {
+	.cardResto {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-device-width : 350px) {
+	.functionStep {
+		width: 280.49px;
+		;
+	}
+}
+
+
 
 /*------------------- Menus Styles ----------------------*/
-
-.headerMenu{
- display: flex;	
- align-items: center;
-  img{
-	margin-right: auto;
-	margin-left: -40px;
-  }
- 
- a{
-	margin-right: auto;
- }
+header{
+	background-color: #fff;
 }
 
-.MenuImage{
-	max-width: 1440px;
-	height: 290px;	
-	background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-	background-size: cover;
-	margin: 0 auto;
-   }
-   
+.headerMenu {
+	display: flex;
+	align-items: center;
 
-.menuMain{
+	img {
+		margin-right: auto;
+		margin-left: -40px;
+	}
+
+	a {
+		margin-right: auto;
+	}
+}
+
+.MenuImage {
+	width: 100%;
+	height: 290px;
+	background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+	background-size: cover;
+	background-position: center right;
+}
+
+.MenuImageTwo {
+	width: 100%;
+	height: 290px;
+	background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+	background-size: cover;
+	background-position: center right;
+}
+
+.MenuImageThree {
+	width: 100%;
+	height: 290px;
+	background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.MenuImageFour {
+	width: 100%;
+	height: 290px;
+	background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+	background-size: cover;
+	background-position: center right;
+}
+
+
+.menuMain {
 	background-color: $back-grey;
-    padding: 0 13px;
+	padding: 0 13px;
 	border-top-right-radius: 40px;
 	border-top-left-radius: 40px;
-    position: relative;
+	position: relative;
 	bottom: 50px;
-    max-width: 1055px;
+	max-width: 1055px;
 	margin: 0 auto -50px auto;
 
 }
 
 
 
-.tiTleMenu{
+.tiTleMenu {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	H1{
+
+	H1 {
 		font-family: $alternative-font;
 		font-weight: 400;
 		font-size: 28px;
 		margin: 30px 0 20px 0,
 	}
-    
+
 }
 
-.repas{
+.repas {
 	max-width: 634px;
 	margin: 0 auto;
 }
 
 
-.titleMinRepas{
+.titleMinRepas {
 	font-weight: 300;
 	font-size: 16px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
 
-hr{
+hr {
 	border: 1px solid $main-turquoise;
-    width: 40px;
+	width: 40px;
 	margin-right: 100%;
 }
 
@@ -530,30 +623,30 @@ hr{
 /*------------------- Menu check ----------------------*/
 
 .menuLine {
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 15px;
-    padding-left: 5px;
-    background-color: #ffff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 2px 4px 15px #dedede;
-    transition: 300ms ease-in-out;
+	height: 70px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 15px;
+	padding-left: 5px;
+	background-color: #ffff;
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 2px 4px 15px #dedede;
+	transition: 300ms ease-in-out;
 }
 
 
-.menuText{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex: 1;
-    padding: 5px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.menuText {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 1;
+	padding: 5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 
 	p {
 		overflow: hidden;
@@ -564,7 +657,7 @@ hr{
 	}
 }
 
-.menuText h3{
+.menuText h3 {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -573,122 +666,139 @@ hr{
 
 
 .menuPrice {
-    display: flex;
-    align-items: flex-end;
-    height: 90%;
-    margin-bottom: 20px;
+	display: flex;
+	align-items: flex-end;
+	height: 90%;
+	margin-bottom: 20px;
 }
 
-.menuIcon{
-    height: 100%;
-    background-color: #99e2d0;
-    width: 4em;
-    margin-right: -4em;
-    margin-left: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 0.8s;
+.menuIcon {
+	height: 100%;
+	background-color: #99e2d0;
+	width: 4em;
+	margin-right: -4em;
+	margin-left: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition-duration: 0.8s;
 }
 
-.fa-circle-check{
-    width: 20px;
-    height: 20px;
-    color: #ffff;
+.fa-circle-check {
+	width: 20px;
+	height: 20px;
+	color: #ffff;
 }
 
 
 .menuLine:hover .menuIcon {
-    margin-right: 0em;
-} 
+	margin-right: 0em;
+}
 
 
 /*------------------- animations ----------------------*/
 
-.menuOne{
+.menuOne {
 	animation: menu-load 600ms ease-in 100ms;
 	margin-bottom: 52px;
-  }
-.menuTwo{
+}
+
+.menuTwo {
 	animation: menu-load 900ms ease-in 100ms;
 	margin-bottom: 52px;
-  }
+}
 
-  .menuThree{
+.menuThree {
 	animation: menu-load 1200ms ease-in 100ms;
 	margin-bottom: 40px;
-  }
-  
-  @keyframes menu-load{
-	0%{
-	 transform: translateY(-40%);
-	 opacity: 0;
+}
+
+@keyframes menu-load {
+	0% {
+		transform: translateY(-40%);
+		opacity: 0;
 	}
-  
-	100%{
-	  transform: translateY(0);
-	  opacity: 1;
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
 	}
-  }
+}
 
-  .loading{
-	
-		background: $main-gradient;
-		display: flex;
-		width: 100%;
-		height: 100%;
-		align-items: center;
-		justify-content: center;
-		opacity: 75%;
-        position: absolute;
-		 z-index: 5;
-		 align-items: center;
-		 animation:  load 2s  ease-out 1s forwards;
+.loading {
 
-		.spinner{
-			height: 120px;
-			width: 120px;
-			border: 8px solid;
-			border-color: white transparent white transparent;
-			border-radius: 50%;
-			animation: spin 1.2s linear infinite;
-			margin-bottom: 1750px;
-			position: fixed;
-		  }
+	background: $main-gradient;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	opacity: 100%;
+	position: absolute;
+	z-index: 5;
+	align-items: center;
+	animation: load 2s ease-out 1 forwards;
 
-		  @keyframes spin {
-			to {
-			  transform: rotate(360deg);
-			}
+	.spinner {
+		height: 120px;
+		width: 120px;
+		border: 8px solid;
+		border-color: white transparent white transparent;
+		border-radius: 50%;
+		animation: spin 1.2s linear infinite;
+		margin-bottom: 1750px;
+		position: fixed;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
 		}
+	}
 
-		  }
-	
-		  @keyframes load {
+}
+
+.loading img{
+	margin-bottom: 1500px;
+	filter: invert(100%) sepia(54%) saturate(2%) hue-rotate(34deg) brightness(114%) contrast(101%);
+	position: fixed;
+	animation: blink 0.9s linear infinite;
+}
+
+@keyframes blink{
+	50% {
+		opacity: 0.0;
+	  }
+}
+
+@keyframes load {
+
+
+	0% {
+		opacity: 100%;
+       
+	}
+
+	65% {
+		opacity: 85%;
 		
+	}
 
-			0% {
-				opacity: 80%;
-				
-			  }
-			 
-			  95% {
-				opacity: 0;
-				z-index: 100;
-			  }
+	80% {
+		opacity: 75%;
 
-			  100% {
-				z-index: -100;
-				opacity: 0;
-			  }
+	}
 
-			
-		}
+	95% {
+		opacity: 0%;
+		z-index: 100;
+	}
 
-
-		 
-
-	
+	100% {
+		z-index: -200;
+		opacity: 0;
+	    display: none;
+	}
 
 
-
+}

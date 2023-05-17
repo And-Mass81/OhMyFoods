@@ -213,7 +213,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  left: -14px;
+  left: -4%;
   position: absolute;
 }
 
@@ -229,7 +229,7 @@ button:hover {
 .restaurants h2 {
   font-weight: 700;
   font-size: 1.4rem;
-  margin-left: 10px;
+  margin-left: 3px;
   margin-bottom: 20px;
 }
 
@@ -328,10 +328,15 @@ footer ul li {
   margin-right: 10px;
 }
 
+functionStepWrap {
+  width: 100%;
+  display: flex;
+}
+
 @media screen and (min-width: 1024px) {
   header,
   .mainTitle {
-    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
   }
   .banner {
@@ -344,6 +349,7 @@ footer ul li {
     flex-wrap: wrap;
     margin: 30px auto;
     padding: 0;
+    background-color: #fff;
   }
   .fonctionnement h2 {
     max-width: 1100px;
@@ -351,26 +357,25 @@ footer ul li {
   }
   .functionStepWrap {
     display: flex;
-    justify-content: space-around;
-    max-width: 1100px;
-    gap: 42px;
+    max-width: 100%;
   }
   .functionStep {
     width: 20.156rem;
     position: relative;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   .functionStep span {
     left: -13px;
   }
   .restaurants {
-    max-width: 1440px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0;
   }
   .restaurants h2 {
     max-width: 1100px;
     margin: 30px auto;
-    padding-top: 30px;
+    padding: 30px 0 0 10px;
   }
   .cardRestoWrap {
     display: flex;
@@ -378,12 +383,13 @@ footer ul li {
     max-width: 1100px;
     margin: 0 auto;
     justify-content: space-between;
+    padding: 0 10px 0 10px;
   }
   .cardResto {
     width: 31.166rem;
   }
   footer {
-    max-width: 1440px;
+    width: 100%;
     display: flex;
     margin: 0 auto;
     flex-direction: row-reverse;
@@ -403,8 +409,52 @@ footer ul li {
   .spinner {
     margin-top: 1000px;
   }
+  .loading img {
+    margin-top: 1000px;
+  }
+}
+@media only screen and (min-device-width: 550px) and (max-device-width: 1024px) {
+  .cardRestoWrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+  }
+  .restaurants h2 {
+    margin-left: 6px;
+  }
+  .cardResto {
+    position: relative;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 40px;
+    width: 50%;
+    padding: 20px;
+  }
+  .spinner {
+    margin-top: 550px;
+  }
+  .loading img {
+    margin-top: 1000px;
+  }
+}
+@media only screen and (max-device-width: 549px) {
+  .cardResto {
+    width: 100%;
+  }
+}
+@media only screen and (max-device-width: 350px) {
+  .functionStep {
+    width: 280.49px;
+  }
 }
 /*------------------- Menus Styles ----------------------*/
+header {
+  background-color: #fff;
+}
+
 .headerMenu {
   display: flex;
   align-items: center;
@@ -418,11 +468,35 @@ footer ul li {
 }
 
 .MenuImage {
-  max-width: 1440px;
+  width: 100%;
   height: 290px;
-  background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: cover;
-  margin: 0 auto;
+  background-position: center right;
+}
+
+.MenuImageTwo {
+  width: 100%;
+  height: 290px;
+  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: cover;
+  background-position: center right;
+}
+
+.MenuImageThree {
+  width: 100%;
+  height: 290px;
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.MenuImageFour {
+  width: 100%;
+  height: 290px;
+  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: cover;
+  background-position: center right;
 }
 
 .menuMain {
@@ -568,11 +642,11 @@ hr {
   height: 100%;
   align-items: center;
   justify-content: center;
-  opacity: 75%;
+  opacity: 100%;
   position: absolute;
   z-index: 5;
   align-items: center;
-  animation: load 2s ease-out 1s forwards;
+  animation: load 2s ease-out 1 forwards;
 }
 .loading .spinner {
   height: 120px;
@@ -590,16 +664,35 @@ hr {
   }
 }
 
+.loading img {
+  margin-bottom: 1500px;
+  filter: invert(100%) sepia(54%) saturate(2%) hue-rotate(34deg) brightness(114%) contrast(101%);
+  position: fixed;
+  animation: blink 0.9s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 @keyframes load {
   0% {
-    opacity: 80%;
+    opacity: 100%;
+  }
+  65% {
+    opacity: 85%;
+  }
+  80% {
+    opacity: 75%;
   }
   95% {
-    opacity: 0;
+    opacity: 0%;
     z-index: 100;
   }
   100% {
-    z-index: -100;
+    z-index: -200;
     opacity: 0;
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
